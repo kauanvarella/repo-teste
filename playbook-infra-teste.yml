@@ -40,11 +40,10 @@
     - name: Download Telegraf
       get_url:
         url: https://dl.influxdata.com/telegraf/releases/telegraf_1.5.2-1_amd64.deb
-        dest: /home/ubuntu/
+        dest: /home/ubuntu/repo-teste
         mode: '0440'
 
     - name: Instalando Telegraf
-      shell: cd ..
       shell: dpkg -i telegraf_1.5.2-1_amd64.deb
       
     - name: Iniciando o servico do Telegraf
