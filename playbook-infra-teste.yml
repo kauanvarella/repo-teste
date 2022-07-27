@@ -20,10 +20,6 @@
       shell: systemctl enable docker
       shell: usermod -a -G docker ec2-user
       shell: chown $USER /var/run/docker.sock
-
-    - name: Instalando Docker SDK Python
-      pip:
-        name: docker
         
     - name: Container InfluxDB
       docker_container:
